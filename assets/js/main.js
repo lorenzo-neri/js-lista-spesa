@@ -11,10 +11,8 @@ let shopList = ['bread', 'milk', 'coockies', 'fish', 'potato', 'lightsaber'];
 
 let bodyEl = document.querySelector('body');
 let listEl = document.createElement('ul');
-let listItemEl = document.createElement('li');
 
 bodyEl.append(listEl);
-listEl.append(listItemEl);
 
 let i = 0;
 
@@ -22,7 +20,9 @@ while (i < shopList.length) {
     
     const item = shopList[i];
     console.log(item);
-    listItemEl.append(item);
+    let listItemEl = document.createElement('li');
+    listItemEl.innerText = item; 
+    listEl.append(listItemEl);
     
     i++
 }
